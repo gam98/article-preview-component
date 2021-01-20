@@ -1,0 +1,165 @@
+:root {
+    --very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --grayish-Blue: hsl(212, 23%, 69%);
+    --light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+body {
+    font-size: 13px;
+    // Font-weight 500 - 700
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+    background: var(--light-Grayish-Blue);
+    font-weight: 500;
+}
+.container {
+    max-width: 60%;
+    display: flex;
+    border-radius: 10px;    
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .left {
+        background: url(../images/drawers.jpg);
+        background-repeat: no-repeat;
+        background-size: 130%;  
+        width: 700px;
+    }
+    .right {
+        padding: 30px;
+        padding-left: 40px;
+        h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: var(--very-Dark-Grayish-Blue);
+            font-weight: 700;
+        }
+        p {
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 25px;
+            color: var(--desaturated-Dark-Blue);
+           
+        }
+        .person {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .about {
+                display: flex;
+                align-items: center;
+                img {
+                    display: block;
+                    border-radius: 50%;
+                }
+                .info {
+                    margin-left: 20px;
+                    h4 {
+                        margin-top: 0;
+                        margin-bottom: 5px;
+                        color: var(--very-Dark-Grayish-Blue);
+                        font-weight: 700;
+                    }
+                    p {
+                        margin-top: 0;
+                        margin-bottom: 0;   
+                        font-size: 13px;
+                    }
+                }
+
+            }
+            .share {
+                border-radius: 50%;
+                background-color: var(--light-Grayish-Blue);
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 20px;
+                cursor: pointer;
+
+            }
+            .share-active {
+                background: var(--very-Dark-Grayish-Blue);
+                color: #fff;
+            }
+            .social-media {
+                display: none;
+            }
+            .active {
+                display: block;
+                color: #fff;
+                position: absolute;
+                bottom: 270px;     
+                right: 200px;
+                background-color: var(--very-Dark-Grayish-Blue);
+                width: 240px;
+                border-radius: 10px;
+                padding: 10px 0;
+                    
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background: var(--very-Dark-Grayish-Blue);
+                    left: 50%;
+                    transform: rotate(45deg);
+
+                }
+                    span {
+                        color: var(--light-Grayish-Blue);
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        opacity: .7;
+                        margin-right: 10px;
+                        font-weight: 500;
+                    }
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                 }
+
+        }
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 376px) {
+    .container {
+        max-width: 90%;
+        flex-wrap: wrap;
+        height: 630px;
+        .left {
+            height: 36%;    
+            width: 100%;
+            background-size: 100%;
+        }
+        .right {
+            .person {
+                .active {
+                    bottom: 210px;
+                    right: 26px;
+                    width: 86%;
+                &::after {
+                    left: 81%;
+                }
+                }
+            } 
+        }
+    }
+}

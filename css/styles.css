@@ -1,0 +1,204 @@
+:root {
+  --very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --grayish-Blue: hsl(212, 23%, 69%);
+  --light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  background: var(--light-Grayish-Blue);
+  font-weight: 500;
+}
+
+.container {
+  max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .left {
+  background: url(../images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-size: 130%;
+  width: 700px;
+}
+
+.container .right {
+  padding: 30px;
+  padding-left: 40px;
+}
+
+.container .right h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: var(--very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+
+.container .right p {
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 25px;
+  color: var(--desaturated-Dark-Blue);
+}
+
+.container .right .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .right .person .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .right .person .about img {
+  display: block;
+  border-radius: 50%;
+}
+
+.container .right .person .about .info {
+  margin-left: 20px;
+}
+
+.container .right .person .about .info h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: var(--very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+
+.container .right .person .about .info p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.container .right .person .share {
+  border-radius: 50%;
+  background-color: var(--light-Grayish-Blue);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container .right .person .share-active {
+  background: var(--very-Dark-Grayish-Blue);
+  color: #fff;
+}
+
+.container .right .person .social-media {
+  display: none;
+}
+
+.container .right .person .active {
+  display: block;
+  color: #fff;
+  position: absolute;
+  bottom: 270px;
+  right: 200px;
+  background-color: var(--very-Dark-Grayish-Blue);
+  width: 240px;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.container .right .person .active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--very-Dark-Grayish-Blue);
+  left: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container .right .person .active span {
+  color: var(--light-Grayish-Blue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: .7;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.container .right .person .active a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    max-width: 90%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 630px;
+  }
+  .container .left {
+    height: 36%;
+    width: 100%;
+    background-size: 100%;
+  }
+  .container .right .person .active {
+    bottom: 210px;
+    right: 26px;
+    width: 86%;
+  }
+  .container .right .person .active::after {
+    left: 81%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
